@@ -19,8 +19,8 @@ What are the prime factors of 60?
 - 5 does go cleanly into 5.
 - We're left only with 1, so now, we're done.
 
-Our successful divisors in that computation
-represent the list of prime factors of 60: 2, 2, 3, and 5.
+Our successful divisors in that computation represent the list of prime
+factors of 60: 2, 2, 3, and 5.
 
 You can check this yourself:
 
@@ -28,6 +28,19 @@ You can check this yourself:
 - = 4 * 15
 - = 60
 - Success!
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

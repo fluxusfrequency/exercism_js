@@ -23,8 +23,21 @@ Note that the union of `keep` and `discard` is all the elements.
 ## Restrictions
 
 Keep your hands off that filter/reject/whatchamacallit functionality
-provided by your standard library!
-Solve this one yourself using other basic tools instead.
+provided by your standard library!  Solve this one yourself using other
+basic tools instead.
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

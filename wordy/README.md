@@ -10,7 +10,8 @@ E.g.
 
 The program should handle large numbers and negative numbers.
 
-Use the tests to drive your solution by deleting the `skip` in one test at a time.
+Use the tests to drive your solution by deleting the `skip` in one test
+at a time.
 
 ## Step 2
 
@@ -63,6 +64,19 @@ Implement questions of the type:
 > What is 2 raised to the 5th power?
 
 Remember to write failing tests for this code.
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

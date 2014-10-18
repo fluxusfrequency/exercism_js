@@ -4,8 +4,8 @@ Write a program that will convert a binary number, represented as a string (e.g.
 
 Write a program passing the tests.
 
-You will be guided to implement binary to decimal conversion.
-Given a binary input string, your program should be able to produce a decimal
+You will be guided to implement binary to decimal conversion.  Given a
+binary input string, your program should be able to produce a decimal
 output.
 
 ## Note
@@ -30,6 +30,19 @@ So: `23 => 2*10^1 + 3*10^0 => 2*10 + 3*1 = 23 base 10`
 Binary is similar, but uses powers of 2 rather than powers of 10.
 
 So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

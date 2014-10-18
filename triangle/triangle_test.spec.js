@@ -54,27 +54,27 @@ describe("Triangle", function() {
 
   it("test triangles with no size are illegal", function() {
     var triangle = new Triangle(0,0,0);
-    expect(triangle.kind).toThrow();
+    expect(triangle.kind.bind(triangle)).toThrow();
   });
 
   it("triangles with negative sides are illegal", function() {
     var triangle = new Triangle(3,4,-5);
-    expect(triangle.kind()).toEqual("illegal");
+    expect(triangle.kind.bind(triangle)).toThrow();
   });
 
   it("triangles violating triangle inequality are illegal", function() {
     var triangle = new Triangle(1,1,3);
-    expect(triangle.kind()).toEqual("illegal");
+    expect(triangle.kind.bind(triangle)).toThrow();
   });
 
   it("triangles violating triangle inequality are illegal 2", function() {
     var triangle = new Triangle(2,4,2);
-    expect(triangle.kind()).toEqual("illegal");
+    expect(triangle.kind.bind(triangle)).toThrow();
   });
 
   it("triangles violating triangle inequality are illegal 3", function() {
     var triangle = new Triangle(7,3,2);
-    expect(triangle.kind()).toEqual("illegal");
+    expect(triangle.kind.bind(triangle)).toThrow();
   });
 
 });

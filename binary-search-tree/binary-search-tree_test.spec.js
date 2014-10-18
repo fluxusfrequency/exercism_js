@@ -1,4 +1,4 @@
-var Bst = require('./bst');
+var Bst = require('./binary-search-tree');
 
 function recordAllData(bst) {
   var out = [];
@@ -14,7 +14,7 @@ describe('BinarySearchTree', function() {
     expect(4).toEqual(new Bst(4).data);
   });
 
-  it('inserting less', function() {
+  xit('inserting less', function() {
     var four;
 
     four = new Bst(4);
@@ -24,7 +24,7 @@ describe('BinarySearchTree', function() {
     expect(2).toEqual(four.left.data);
   });
 
-  it('inserting same', function() {
+  xit('inserting same', function() {
     var four;
 
     four = new Bst(4);
@@ -34,7 +34,7 @@ describe('BinarySearchTree', function() {
     expect(4).toEqual(four.left.data);
   });
 
-  it('inserting right', function() {
+  xit('inserting right', function() {
     var four;
 
     four = new Bst(4);
@@ -44,7 +44,7 @@ describe('BinarySearchTree', function() {
     expect(5).toEqual(four.right.data);
   });
 
-  it('complex tree', function() {
+  xit('complex tree', function() {
     var four;
 
     four = new Bst(4);
@@ -64,11 +64,11 @@ describe('BinarySearchTree', function() {
     expect(7).toEqual(four.right.right.data);
   });
 
-  it('iterating one element', function() {
+  xit('iterating one element', function() {
     expect([4]).toEqual(recordAllData(new Bst(4)));
   });
 
-  it('iterating over smaller element', function() {
+  xit('iterating over smaller element', function() {
     var four;
 
     four = new Bst(4);
@@ -77,7 +77,7 @@ describe('BinarySearchTree', function() {
     expect([2, 4]).toEqual(recordAllData(four));
   });
 
-  it('iterating over larger element', function() {
+  xit('iterating over larger element', function() {
     var four;
 
     four = new Bst(4);
@@ -86,7 +86,7 @@ describe('BinarySearchTree', function() {
     expect([4, 5]).toEqual(recordAllData(four));
   });
 
-  it('iterating over complex tree', function() {
+  xit('iterating over complex tree', function() {
     var four;
 
     four = new Bst(4);
@@ -98,19 +98,6 @@ describe('BinarySearchTree', function() {
     four.insert(5);
 
     expect([1, 2, 3, 4, 5, 6, 7]).toEqual(recordAllData(four));
-  });
-
-  it('returns all of the nodes', function() {
-    var five;
-
-    five = new Bst(5);
-    five.insert(3);
-    five.insert(6);
-    five.insert(2);
-    five.insert(7);
-    five.insert(1);
-    five.insert(4);
-    expect([1, 2, 3, 4, 5, 6, 7]).toEqual(five.all());
   });
 
 });

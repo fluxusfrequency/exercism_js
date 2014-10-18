@@ -8,14 +8,14 @@ describe('Food Chain', function () {
     expect(song.verse(1)).toEqual(expected);
   });
 
-  it('spider', function () {
+  xit('spider', function () {
     var expected = "I know an old lady who swallowed a spider.\nIt wriggled and jiggled and tickled inside her.\n" +
       "She swallowed the spider to catch the fly.\n" + "I don't know why she swallowed the fly. Perhaps she'll die.\n";
 
     expect(song.verse(2)).toEqual(expected);
   });
 
-  it('bird', function () {
+  xit('bird', function () {
     var expected = "I know an old lady who swallowed a bird.\n" +
       "How absurd to swallow a bird!\n" +
       "She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\n" +
@@ -25,7 +25,7 @@ describe('Food Chain', function () {
     expect(song.verse(3)).toEqual(expected);
   });
 
-  it('cat', function () {
+  xit('cat', function () {
     var expected = "I know an old lady who swallowed a cat.\n" +
       "Imagine that, to swallow a cat!\n" +
       "She swallowed the cat to catch the bird.\n" +
@@ -37,7 +37,7 @@ describe('Food Chain', function () {
     expect(song.verse(4)).toEqual(expected);
   });
 
-  it('dog', function () {
+  xit('dog', function () {
     var expected = "I know an old lady who swallowed a dog.\n" +
       "What a hog, to swallow a dog!\n" +
       "She swallowed the dog to catch the cat.\n" +
@@ -50,7 +50,7 @@ describe('Food Chain', function () {
     expect(song.verse(5)).toEqual(expected);
   });
 
-  it('goat', function () {
+  xit('goat', function () {
     var expected = "I know an old lady who swallowed a goat.\n" +
       "Just opened her throat and swallowed a goat!\n" +
       "She swallowed the goat to catch the dog.\n" +
@@ -64,7 +64,7 @@ describe('Food Chain', function () {
     expect(song.verse(6)).toEqual(expected);
   });
 
-  it('cow', function () {
+  xit('cow', function () {
     var expected = "I know an old lady who swallowed a cow.\n" +
       "I don't know how she swallowed a cow!\n" +
       "She swallowed the cow to catch the goat.\n" +

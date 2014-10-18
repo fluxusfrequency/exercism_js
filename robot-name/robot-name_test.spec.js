@@ -1,10 +1,9 @@
-var Robot = require('./robot');
+var Robot = require('./robot-name');
 
 describe("Robot", function() {
-
   it("has a name", function() {
     var robot = new Robot();
-    expect(robot.name).toMatch(/\w{2}\d{3}/);
+    expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/);
   });
 
   it("name is the same each time", function() {
@@ -25,5 +24,4 @@ describe("Robot", function() {
     var newName = robot.name;
     expect(originalName).not.toEqual(newName);
   });
-
 });

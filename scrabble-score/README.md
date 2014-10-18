@@ -34,8 +34,21 @@ And to total:
 - = 14
 
 ## Extensions
-* You can play a `:double` or a `:triple` letter.
-* You can play a `:double` or a `:triple` word.
+- You can play a `:double` or a `:triple` letter.
+- You can play a `:double` or a `:triple` word.
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

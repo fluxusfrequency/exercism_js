@@ -20,10 +20,10 @@ representing this matrix:
 
 your code should be able to spit out:
 
-- A list of the rows,
-  reading each row left-to-right while moving top-to-bottom across the rows,
-- A list of the columns,
-  reading each column top-to-bottom while moving from left-to-right.
+- A list of the rows, reading each row left-to-right while moving
+  top-to-bottom across the rows,
+- A list of the columns, reading each column top-to-bottom while moving
+  from left-to-right.
 
 The rows for our example matrix:
 
@@ -36,6 +36,19 @@ And its columns:
 - 9, 5, 6
 - 8, 3, 6
 - 7, 2, 7
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

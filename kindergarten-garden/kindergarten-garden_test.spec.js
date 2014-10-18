@@ -1,4 +1,4 @@
-var Garden = require('./garden');
+var Garden = require('./kindergarten-garden');
 
 describe('Garden', function () {
 
@@ -7,17 +7,17 @@ describe('Garden', function () {
       .toEqual(['radishes', 'clover', 'grass', 'grass']);
   });
 
-  it('another for Alice', function () {
+  xit('another for Alice', function () {
     expect(new Garden("VC\nRC").alice)
       .toEqual(['violets', 'clover', 'radishes', 'clover']);
   });
 
-  it('for Bob', function () {
+  xit('for Bob', function () {
     expect(new Garden("VVCG\nVVRC").bob)
       .toEqual(['clover', 'grass', 'radishes', 'clover']);
   });
 
-  it('for Bob and Charlie', function () {
+  xit('for Bob and Charlie', function () {
     var garden = new Garden("VVCCGG\nVVCCGG");
     expect(garden.bob).toEqual(['clover', 'clover', 'clover', 'clover']);
     expect(garden.charlie).toEqual(['grass', 'grass', 'grass', 'grass']);
@@ -29,62 +29,62 @@ describe('Full garden', function () {
   var diagram = "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV";
   var garden = new Garden(diagram);
 
-  it('for Alice', function () {
+  xit('for Alice', function () {
     expect(garden.alice)
       .toEqual(['violets', 'radishes', 'violets', 'radishes']);
   });
 
-  it('for Bob', function () {
+  xit('for Bob', function () {
     expect(garden.bob)
       .toEqual(['clover', 'grass', 'clover', 'clover']);
   });
 
-  it('for Charlie', function () {
+  xit('for Charlie', function () {
     expect(garden.charlie)
       .toEqual(['violets', 'violets', 'clover', 'grass']);
   });
 
-  it('for David', function () {
+  xit('for David', function () {
     expect(garden.david)
       .toEqual(['radishes', 'violets', 'clover', 'radishes']);
   });
 
-  it('for Eve', function () {
+  xit('for Eve', function () {
     expect(garden.eve)
       .toEqual(['clover', 'grass', 'radishes', 'grass']);
   });
 
-  it('for Fred', function () {
+  xit('for Fred', function () {
     expect(garden.fred)
       .toEqual(['grass', 'clover', 'violets', 'clover']);
   });
 
-  it('for Ginny', function () {
+  xit('for Ginny', function () {
     expect(garden.ginny)
       .toEqual(['clover', 'grass', 'grass', 'clover']);
   });
 
-  it('for Harriet', function () {
+  xit('for Harriet', function () {
     expect(garden.harriet)
       .toEqual(['violets', 'radishes', 'radishes', 'violets']);
   });
 
-  it('for Ileana', function () {
+  xit('for Ileana', function () {
     expect(garden.ileana)
       .toEqual(['grass', 'clover', 'violets', 'clover']);
   });
 
-  it('for Joseph', function () {
+  xit('for Joseph', function () {
     expect(garden.joseph)
       .toEqual(['violets', 'clover', 'violets', 'grass']);
   });
 
-  it('for Kincaid', function () {
+  xit('for Kincaid', function () {
     expect(garden.kincaid)
       .toEqual(['grass', 'clover', 'clover', 'grass']);
   });
 
-  it('for Larry', function () {
+  xit('for Larry', function () {
     expect(garden.larry)
       .toEqual(['grass', 'violets', 'clover', 'violets']);
   });
@@ -96,12 +96,12 @@ describe('Disordered class', function () {
   var students = ['Samantha', 'Patricia', 'Xander', 'Roger'];
   var garden = new Garden(diagram, students);
 
-  it('Patricia', function () {
+  xit('Patricia', function () {
     expect(garden.patricia)
       .toEqual(['violets', 'clover', 'radishes', 'violets']);
   });
 
-  it('Roger', function () {
+  xit('Roger', function () {
     expect(garden.roger)
       .toEqual(['radishes', 'radishes', 'grass', 'clover']);
   });
@@ -111,7 +111,7 @@ describe('Disordered class', function () {
       .toEqual(['grass', 'violets', 'clover', 'grass']);
   });
 
-  it('Xander', function () {
+  xit('Xander', function () {
     expect(garden.xander)
       .toEqual(['radishes', 'grass', 'clover', 'violets']);
   });

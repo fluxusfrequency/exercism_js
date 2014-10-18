@@ -2,26 +2,42 @@
 
 Write a class `DNA` that takes a DNA string and tells us how many times each nucleotide occurs in the string.
 
-DNA is represented by an alphabet of the following symbols: 'A', 'C', 'G', and 'T'.
+DNA is represented by an alphabet of the following symbols: 'A', 'C',
+'G', and 'T'.
 
-Each symbol represents a nucleotide, which is a fancy name for the particular molecules that happen to make up a large part of DNA.
+Each symbol represents a nucleotide, which is a fancy name for the
+particular molecules that happen to make up a large part of DNA.
 
 Shortest intro to biochemistry EVAR:
 
-* twigs are to birds nests as
-* nucleotides are to DNA and RNA as
-* amino acids are to proteins as
-* sugar is to starch as
-* oh crap lipids
+- twigs are to birds nests as
+- nucleotides are to DNA and RNA as
+- amino acids are to proteins as
+- sugar is to starch as
+- oh crap lipids
 
 I'm not going to talk about lipids because they're crazy complex.
 
 So back to nucleotides.
 
-There are 5 types of nucleotides. 4 of these occur in DNA: `A`, `C`, `G`, and `T`. 4 occur in RNA: `A`, `C`, `G`, `U`.
+DNA contains four types of them: adenine (`A`), cytosine (`C`), guanine
+(`G`), and thymine (`T`).
 
-There are no other nucleotides.
+RNA contains a slightly different set of nucleotides, but we don't care
+about that for now.
 
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

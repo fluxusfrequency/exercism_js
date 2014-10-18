@@ -2,10 +2,25 @@
 
 Write a program that, when given a string of digits, can calculate the largest product for a series of consecutive digits of length n.
 
-For example, for the input `'0123456789'`, the largest product for a series of 3 digits is 504 (7 * 8 * 9), and the largest product for a series of 5 digits is 15120 (5 * 6 * 7 * 8 * 9).
+For example, for the input `'0123456789'`, the largest product for a
+series of 3 digits is 504 (7 * 8 * 9), and the largest product for a
+series of 5 digits is 15120 (5 * 6 * 7 * 8 * 9).
 
-For the input `'73167176531330624919225119674426574742355349194934'`, the
-largest product is 23520.
+For the input `'73167176531330624919225119674426574742355349194934'`,
+the largest product for a series of 6 digits is 23520.
+
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
 
 
 ## Source

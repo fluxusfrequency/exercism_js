@@ -4,6 +4,19 @@ Write a program that will calculate the date that someone turned or will celebra
 
 A gigasecond is one billion (10**9) seconds.
 
+## Making the Test Suite Pass
+
+Execute the tests with:
+
+```bash
+$ jasmine-node .
+```
+
+In many test suites all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+changing `xit` to `it`.
+
 
 ## Source
 

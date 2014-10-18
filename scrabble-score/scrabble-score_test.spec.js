@@ -1,33 +1,27 @@
-var Scrabble = require('./scrabble');
+var score = require('./scrabble-score');
 
 describe('Scrabble', function() {
   it("scores an empty word as zero",function() {
-    var score = Scrabble.score("");
-    expect(score).toEqual(0);
+    expect(score("")).toEqual(0);
   });
 
-  it("scores a null as zero",function() {
-    var score = Scrabble.score(null);
-    expect(score).toEqual(0);
+  xit("scores a null as zero",function() {
+    expect(score(null)).toEqual(0);
   });
 
-  it("scores a very short word",function() {
-    var score = Scrabble.score("a");
-    expect(score).toEqual(1);
+  xit("scores a very short word",function() {
+    expect(score("a")).toEqual(1);
   });
 
-  it("scores the word by the number of letters",function() {
-    var score = Scrabble.score("street");
-    expect(score).toEqual(6);
+  xit("scores the word by the number of letters",function() {
+    expect(score("street")).toEqual(6);
   });
 
-  it("scores more complicated words with more",function() {
-    var score = Scrabble.score("quirky");
-    expect(score).toEqual(22);
+  xit("scores more complicated words with more",function() {
+    expect(score("quirky")).toEqual(22);
   });
 
-  it("scores case insensitive words",function() {
-    var score = Scrabble.score("MULTIBILLIONAIRE");
-    expect(score).toEqual(20);
+  xit("scores case insensitive words",function() {
+    expect(score("MULTIBILLIONAIRE")).toEqual(20);
   });
 });

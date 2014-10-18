@@ -26,15 +26,21 @@ This is called the 'Hamming distance'
 
 The Hamming distance between these two DNA strands is 7.
 
+# Implementation notes
+
+The Hamming distance is only defined for sequences of equal length. This means
+that based on the definition, each language could deal with getting sequences
+of equal length differently.
+
 ## Making the Test Suite Pass
 
 Execute the tests with:
 
 ```bash
-$ jasmine-node bob_test.spec.js
+$ jasmine-node .
 ```
 
-All but the first test have been skipped.
+In many test suites all but the first test have been skipped.
 
 Once you get a test passing, you can unskip the next one by
 changing `xit` to `it`.

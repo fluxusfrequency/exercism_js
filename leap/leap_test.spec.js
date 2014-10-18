@@ -1,25 +1,19 @@
-var Year = require('./year');
+var isLeapYear = require('./leap');
 
 describe("Year", function() {
-
   it("a known leap year", function() {
-    var year = new Year(1996);
-    expect(year.isLeapYear()).toBeTruthy();
+    expect(isLeapYear(1996)).toBe(true);
   });
 
-  it("any old year", function() {
-    var year = new Year(1997);
-    expect(year.isLeapYear()).not.toBeTruthy();
+  xit("any old year", function() {
+    expect(isLeapYear(1997)).not.toBe(true);
   });
 
-  it("turn of the 20th century", function() {
-    var year = new Year(1900);
-    expect(year.isLeapYear()).not.toBeTruthy();
+  xit("turn of the 20th century", function() {
+    expect(isLeapYear(1900)).not.toBe(true);
   });
 
-  it("turn of the 21st century", function() {
-    var year = new Year(2000);
-    expect(year.isLeapYear()).toBeTruthy();
+  xit("turn of the 21st century", function() {
+    expect(isLeapYear(2400)).toBe(true);
   });
-
 });
