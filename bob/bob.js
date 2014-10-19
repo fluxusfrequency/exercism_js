@@ -1,30 +1,36 @@
 var Bob = function() {};
-var Message = function(input) {this.input = input};
-module.exports = Bob;
 
 Bob.prototype.hey = function(phrase) {
   var message = new Message(phrase);
-  if(message.silence()){
+  if(message.isSilent()){
     return 'Fine. Be that way!';
-  } else if(message.yelling()){
-      return 'Woah, chill out!';
-  } else if(message.question()){
+  } else if(message.isShout()){
+      return 'Whoa, chill out!';
+  } else if(message.isQuestion()){
       return 'Sure.';
   } else {
       return 'Whatever.';
   }
 };
 
-
-Message.prototype.question = function() {
-  return this.input.slice(-1) === "?";
+var Message = function(phrase) {
+  this.phrase = phrase
 };
 
-Message.prototype.silence = function() {
-  return this.input.trim() === "";
+Message.prototype.isSilent = function() {
+  return this.phrase.trim() === "";
 };
 
-Message.prototype.yelling = function() {
-  return this.input == this.input.toUpperCase();
+Message.prototype.isShout = function() {
+  return this.hasWords() && this.phrase == this.phrase.toUpperCase();
 };
 
+Message.prototype.isQuestion = function() {
+  return this.phrase.slice(-1) === "?";
+};
+
+Message.prototype.hasWords = function() {
+  return this.phrase.match(/[a-zA-Z]+/);
+};
+
+module.exports = Bob;
