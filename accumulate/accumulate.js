@@ -1,9 +1,7 @@
-(function() {
-  'use strict';
-
-  Array.prototype.accumulate = function(callback){
-    return this.map(callback);
-  };
-
-  module.exports = Array;
-})();
+module.exports = function(list, callback) {
+  var accumulated = [];
+  list.forEach(function(element) {
+    accumulated.push(callback(element));
+  });
+  return accumulated;
+};
