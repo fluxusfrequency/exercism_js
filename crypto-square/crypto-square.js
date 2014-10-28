@@ -9,17 +9,15 @@ Crypto.prototype.normalizePlaintext = function() {
 };
 
 Crypto.prototype.size = function() {
-  return Math.ceil(Math.sqrt(this.message.length));
+  return Math.ceil(Math.sqrt(this.normalizePlaintext().length));
 };
 
 Crypto.prototype.plaintextSegments = function() {
-  var size = this.size();
-  var chunk = new RegExp('.{1,' + size + '}', 'g');
-  return this.normalizePlaintext().match(chunk);
+  return this.normalizePlaintext().match(this._chunk());
 };
 
 Crypto.prototype.ciphertext = function() {
-  var coll = []
+  var coll = [];
   var segments = this.plaintextSegments();
   var mapSegments = function(i) {
     return segments.map(function(s) {
@@ -28,11 +26,18 @@ Crypto.prototype.ciphertext = function() {
   };
 
   for (var i = 0, max = segments[0].length; i < max; i++) {
-    console.log(mapSegments(i));
-    console.log(coll);
-    coll.push(mapSegments(i).join());
+    coll.push(mapSegments(i).join(''));
   }
-  return coll.join();
+  return coll.join('');
+};
+
+Crypto.prototype.normalizeCiphertext = function() {
+  var text = this.ciphertext();
+  return text.match(this._chunk()).join(' ');
+};
+
+Crypto.prototype._chunk = function() {
+  return new RegExp('.{1,' + this.size() + '}', 'g');
 };
 
 module.exports = Crypto;
