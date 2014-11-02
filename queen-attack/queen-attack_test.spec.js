@@ -39,32 +39,32 @@ O O O O O O O O\n\
     expect(queens.toString()).toEqual(board);
   });
 
-  xit("queens cannot attack", function() {
+  it("queens cannot attack", function() {
     var queens = new Queens({ white: [2,3], black: [4,7] });
     expect(queens.canAttack()).toEqual(false);
   });
 
-  xit("queens can attack when they are on the same row", function() {
+  it("queens can attack when they are on the same row", function() {
     var queens = new Queens({ white: [2,4], black: [2,7] });
     expect(queens.canAttack()).toEqual(true);
   });
 
-  xit("queens can attack when they are on the same column", function() {
+  it("queens can attack when they are on the same column", function() {
     var queens = new Queens({ white: [5,4], black: [2,4] });
     expect(queens.canAttack()).toEqual(true);
   });
 
-  xit("queens can attack diagonally", function() {
+  it("queens can attack diagonally", function() {
     var queens = new Queens({ white: [1, 1], black: [6, 6] });
     expect(queens.canAttack()).toEqual(true);
   });
 
-  xit("queens can attack another diagonally", function() {
+  it("queens can attack another diagonally", function() {
     var queens = new Queens({ white: [0, 6], black: [1, 7] });
     expect(queens.canAttack()).toEqual(true);
   });
 
-  xit("queens can attack yet another diagonally", function() {
+  it("queens can attack yet another diagonally", function() {
     var queens = new Queens({ white: [4, 1], black: [6, 3] });
     expect(queens.canAttack()).toEqual(true);
   });
