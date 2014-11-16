@@ -1,1 +1,1 @@
-luhn, meetup, ocr-numbers, queen-attack, saddle-points, say
+luhn, meetup, ocr-numbers, saddle-points, say
