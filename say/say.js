@@ -1,6 +1,6 @@
 module.exports = {
   ONES: {
-    0: 'zero',
+    0: null,
     1: 'one',
     2: 'two',
     3: 'three',
@@ -10,6 +10,19 @@ module.exports = {
     7: 'seven',
     8: 'eight',
     9: 'nine'
+  },
+
+  TENS: {
+    0: null,
+    1: 'ten',
+    2: 'twenty',
+    3: 'thirty',
+    4: 'forty',
+    5: 'fifty',
+    6: 'sixty',
+    7: 'seventy',
+    8: 'eighty',
+    9: 'ninety'
   },
 
   TEENS: {
@@ -24,42 +37,65 @@ module.exports = {
     19: 'nineteen'
   },
 
-  TENS: {
-    10: 'ten',
-    20: 'twenty',
-    30: 'thirty',
-    40: 'forty',
-    50: 'fifty',
-    60: 'sixty',
-    70: 'seventy',
-    80: 'eighty',
-    90: 'ninety'
-  },
-
   inEnglish: function(n) {
-    if (n >= 100) { return this._handleOneHundredPlus(n); }
-    if (n > 20) { return this._handleTwentyPlus(n); }
-    return this.ONES[n] || this.TEENS[n] || this.TENS[n];
+    if (n === 0) { return 'zero'; }
+    if (10 <= n && n <= 19) { return this.TEENS[n]; }
+    return this._translateNumbers(n).join('').trim();
   },
 
-  _handleOneHundredPlus: function(n) {
-    var hundredsPlace = Number(n.toString().slice(-3, 1));
-    var tensAndOnes = Number(n.toString().slice(-2));
-    return [this.ONES[hundredsPlace], 'hundred'].join(' ') + this.inEnglish(tensAndOnes);
-  },
+  _translateNumbers: function(n) {
+    var collector = [];
+    var allNumbers = this._numbersToTranslate(n);
+    for(var i = 0; i < allNumbers.length; i += 3) {
+      var inner = [];
+      var onesPlace = allNumbers[i];
+      var tensPlace = allNumbers[i + 1];
+      var hundredsPlace = allNumbers[i + 2];
 
-  _handleTwentyPlus: function(n) {
-    var tensPlace;
-    var i = 0;
-    var tens = Object.keys(this.TENS).reverse();
-    while (i < tens.length) {
-      var number = Number(n.toString().slice(-2) + '0');
-      if (number % tens[i] === 0) {
-        tensPlace = tens[i];
-        break;
+      if(this.ONES[hundredsPlace]) {
+        inner.push(this.ONES[hundredsPlace] || '');
+        inner.push(' hundred');
       }
-      i++;
+      if(this.ONES[hundredsPlace] && this.TENS[tensPlace]) {
+        inner.push(' ');
+      }
+      if(this.TENS[tensPlace]) {
+        inner.push(this.TENS[tensPlace] || '');
+      }
+      if(this.TENS[tensPlace] && this.ONES[onesPlace]) {
+        inner.push('-');
+      }
+      if(this.ONES[onesPlace]) {
+        inner.push(this.ONES[onesPlace] || '');
+      }
+
+      var i = allNumbers.indexOf(onesPlace);
+      this._addPlaces(i).forEach(function(place) {
+        collector.unshift(place);
+      });
+      collector.unshift(inner.join(''));
     }
-    return [this.TENS[tensPlace], this.ONES[Number(n.toString().slice(-1))]].join('-');
+    return collector;
+  },
+
+  _numbersToTranslate: function(n) {
+    return n.toString().split('').reverse().map(function(char) {
+      return Number(char);
+    });
+  },
+
+  _addPlaces: function(i) {
+    var result = [];
+    if(8 <= i && i <= 10) {
+      result.push(' billion ');
+    }
+    if(5 <= i && i <= 7) {
+      result.push(' million ');
+    }
+    if(2 <= i && i <= 4) {
+      result.push(' thousand ');
+    }
+    return result;
   }
+
 };
