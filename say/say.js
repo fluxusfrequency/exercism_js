@@ -38,15 +38,24 @@ module.exports = {
   },
 
   inEnglish: function(n) {
+    this._validate(n);
     if (n === 0) { return 'zero'; }
     if (10 <= n && n <= 19) { return this.TEENS[n]; }
     return this._translateNumbers(n).join('').trim();
   },
 
+  _validate: function(n) {
+    if (n < 0 || n > 999999999999) {
+      throw new Error('Number must be between 0 and 999,999,999,999.');
+    }
+  },
+
   _translateNumbers: function(n) {
+    var self = this;
     var collector = [];
     var allNumbers = this._numbersToTranslate(n);
-    for(var i = 0; i < allNumbers.length; i += 3) {
+    var i = 0;
+    while(i <= allNumbers.length) {
       var inner = [];
       var onesPlace = allNumbers[i];
       var tensPlace = allNumbers[i + 1];
@@ -69,11 +78,13 @@ module.exports = {
         inner.push(this.ONES[onesPlace] || '');
       }
 
-      var i = allNumbers.indexOf(onesPlace);
-      this._addPlaces(i).forEach(function(place) {
+      var j = allNumbers.indexOf(onesPlace);
+      var places = self._addPlaces(j);
+      places.forEach(function(place) {
         collector.unshift(place);
       });
       collector.unshift(inner.join(''));
+      i += 3;
     }
     return collector;
   },
