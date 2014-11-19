@@ -1,1 +1,1 @@
-meetup, ocr-numbers, saddle-points, say
+meetup, ocr-numbers, saddle-points
