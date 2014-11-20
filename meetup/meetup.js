@@ -58,14 +58,13 @@
   };
 
   Meetup.prototype._findStartDay = function() {
-    var last = new Date(this.year, this.month, -1).getDay()
     return {
       teenth: 13,
       first: 1,
       second: 8,
       third: 15,
       fourth: 22,
-      last: last
+      last: new Date(this.year, this.month + 1, 0).getDate() - 6
     }
   };
 

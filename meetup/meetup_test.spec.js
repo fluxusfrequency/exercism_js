@@ -470,82 +470,82 @@ describe("Meetup", function() {
     expect(meetup.lastMonday()).toEqual(expectedDate);
   });
 
-  //it("last monday of april 2013",function() {
-    //var meetup = new Meetup(3,2013);
-    //var expectedDate = new Date(2013, 3, 29);
-    //expect(meetup.lastMonday()).toEqual(expectedDate);
-  //});
+  it("last monday of april 2013",function() {
+    var meetup = new Meetup(3,2013);
+    var expectedDate = new Date(2013, 3, 29);
+    expect(meetup.lastMonday()).toEqual(expectedDate);
+  });
 
-  //it("last tuesday of may 2013",function() {
-    //var meetup = new Meetup(4,2013);
-    //var expectedDate = new Date(2013, 4, 28);
-    //expect(meetup.lastTuesday()).toEqual(expectedDate);
-  //});
+  it("last tuesday of may 2013",function() {
+    var meetup = new Meetup(4,2013);
+    var expectedDate = new Date(2013, 4, 28);
+    expect(meetup.lastTuesday()).toEqual(expectedDate);
+  });
 
-  //it("last tuesday of june 2013",function() {
-    //var meetup = new Meetup(5,2013);
-    //var expectedDate = new Date(2013, 5, 25);
-    //expect(meetup.lastTuesday()).toEqual(expectedDate);
-  //});
+  it("last tuesday of june 2013",function() {
+    var meetup = new Meetup(5,2013);
+    var expectedDate = new Date(2013, 5, 25);
+    expect(meetup.lastTuesday()).toEqual(expectedDate);
+  });
 
-  //it("last wednesday of july 2013",function() {
-    //var meetup = new Meetup(6,2013);
-    //var expectedDate = new Date(2013, 6, 31);
-    //expect(meetup.lastWednesday()).toEqual(expectedDate);
-  //});
+  it("last wednesday of july 2013",function() {
+    var meetup = new Meetup(6,2013);
+    var expectedDate = new Date(2013, 6, 31);
+    expect(meetup.lastWednesday()).toEqual(expectedDate);
+  });
 
-  //it("last wednesday of august 2013",function() {
-    //var meetup = new Meetup(7,2013);
-    //var expectedDate = new Date(2013, 7, 28);
-    //expect(meetup.lastWednesday()).toEqual(expectedDate);
-  //});
+  it("last wednesday of august 2013",function() {
+    var meetup = new Meetup(7,2013);
+    var expectedDate = new Date(2013, 7, 28);
+    expect(meetup.lastWednesday()).toEqual(expectedDate);
+  });
 
-  //it("last thursday of september 2013",function() {
-    //var meetup = new Meetup(8,2013);
-    //var expectedDate = new Date(2013, 8, 26);
-    //expect(meetup.lastThursday()).toEqual(expectedDate);
-  //});
+  it("last thursday of september 2013",function() {
+    var meetup = new Meetup(8,2013);
+    var expectedDate = new Date(2013, 8, 26);
+    expect(meetup.lastThursday()).toEqual(expectedDate);
+  });
 
-  //it("last thursday of october 2013",function() {
-    //var meetup = new Meetup(9,2013);
-    //var expectedDate = new Date(2013, 9, 31);
-    //expect(meetup.lastThursday()).toEqual(expectedDate);
-  //});
+  it("last thursday of october 2013",function() {
+    var meetup = new Meetup(9,2013);
+    var expectedDate = new Date(2013, 9, 31);
+    expect(meetup.lastThursday()).toEqual(expectedDate);
+  });
 
-  //it("last friday of november 2013",function() {
-    //var meetup = new Meetup(10,2013);
-    //var expectedDate = new Date(2013, 10, 29);
-    //expect(meetup.lastFriday()).toEqual(expectedDate);
-  //});
+  it("last friday of november 2013",function() {
+    var meetup = new Meetup(10,2013);
+    var expectedDate = new Date(2013, 10, 29);
+    expect(meetup.lastFriday()).toEqual(expectedDate);
+  });
 
-  //it("last friday of december 2013",function() {
-    //var meetup = new Meetup(11,2013);
-    //var expectedDate = new Date(2013, 11, 27);
-    //expect(meetup.lastFriday()).toEqual(expectedDate);
-  //});
+  it("last friday of december 2013",function() {
+    var meetup = new Meetup(11,2013);
+    var expectedDate = new Date(2013, 11, 27);
+    expect(meetup.lastFriday()).toEqual(expectedDate);
+  });
 
-  //it("last saturday of january 2013",function() {
-    //var meetup = new Meetup(0,2013);
-    //var expectedDate = new Date(2013, 0, 26);
-    //expect(meetup.lastSaturday()).toEqual(expectedDate);
-  //});
+  it("last saturday of january 2013",function() {
+    var meetup = new Meetup(0,2013);
+    var expectedDate = new Date(2013, 0, 26);
+    expect(meetup.lastSaturday()).toEqual(expectedDate);
+  });
 
-  //it("last saturday of february 2013",function() {
-    //var meetup = new Meetup(1,2013);
-    //var expectedDate = new Date(2013, 1, 23);
-    //expect(meetup.lastSaturday()).toEqual(expectedDate);
-  //});
+  it("last saturday of february 2013",function() {
+    var meetup = new Meetup(1,2013);
+    var expectedDate = new Date(2013, 1, 23);
+    expect(meetup.lastSaturday()).toEqual(expectedDate);
+  });
 
-  //it("last sunday of march 2013",function() {
-    //var meetup = new Meetup(2,2013);
-    //var expectedDate = new Date(2013, 2, 31);
-    //expect(meetup.lastSunday()).toEqual(expectedDate);
-  //});
+  it("last sunday of march 2013",function() {
+    var meetup = new Meetup(2,2013);
+    var expectedDate = new Date(2013, 2, 31);
+    expect(meetup.lastSunday()).toEqual(expectedDate);
+  });
 
-  //it("last sunday of april 2013",function() {
-    //var meetup = new Meetup(3,2013);
-    //var expectedDate = new Date(2013, 3, 28);
-    //expect(meetup.lastSunday()).toEqual(expectedDate);
-  //});
+  it("last sunday of april 2013",function() {
+    var meetup = new Meetup(3,2013);
+    var expectedDate = new Date(2013, 3, 28);
+    expect(meetup.lastSunday()).toEqual(expectedDate);
+  });
 
 });
